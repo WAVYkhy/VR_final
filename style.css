@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#hover_text01 h1,
+#hover_text02 h1,
+#hover_text03 h1,
+#hover_Screen01 h1 {
+    font-size: 16px;
+    color: black;
+    font-weight: 500;
+}
+
+#hover_text01 img {
+    z-index: 99;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#hover_text02 img {
+    z-index: 99;
+    display: block;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#hover_text03 img {
+    z-index: 99;
+    display: block;
+    margin-top: 10px;
+    border-radius: 30px;
+    width: 500px;
+    height: 100%;
+    cursor: pointer;
+}
+
+#hover_text03>a .info {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    bottom: 0;
+    ;
+    left: 0;
+    border-radius: 0 0 30px 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 2;
+    padding: 20px 40px;
+}
+
+#hover_text03 .info p:nth-child(1) {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#hover_text03 .info span {
+    color: rgba(255, 255, 255, .8);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#hover_text03 .info p:nth-child(2) {
+    color: rgba(255, 255, 255, .9);
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+#hover_text03 .info hr {
+    border: 0;
+    background-color: #9e9e9e;
+    height: 1px;
+    margin-top: 16px;
+}
+
+#hover_text03 .info p:nth-child(4) {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+#hover_text03 .info p:nth-child(5) {
+    color: rgba(255, 255, 255, .8);
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 300;
+}
+
+#hover_text03 .info p:nth-child(6) {
+    color: rgba(255, 255, 255, .8);
+    font-size: 12px;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+#hover_Screen01 iframe {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.tab-inner {
+    z-index: 0;
+    position: absolute;
+    /* background-color: rgba(255,255,255,.7); */
+    padding: 20px 20px 20px 0;
+    border-radius: 0 30px 30px 0;
+    top: 50px;
+    left: -50%;
+    transition: .5s;
+}
+
+input[name=tab-menu] {
+    display: none;
+}
+
+.slide {
+    width: 700px;
+    height: 624px;
+    overflow: hidden;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+.slide-inner {
+    width: 1400px;
+    height: 624px;
+    display: flex;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide-inner > .slide-inner01 {
+    width: 700px;
+    height: 624px;
+}
+
+.slide-inner > .slide-inner01 img {
+    width: 700px;
+    height: 624px;
+}
+
+.slide-inner > .slide-inner02 {
+    width: 700px;
+    height: 624px;
+    background-color: #1B1B1B;
+    color:white;
+    text-align: center;
+}
+.slide-inner02 p {
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 60px;
+    color:#e0e0e0;
+    margin-bottom: 30px;
+}
+
+.tab-inner input[id=tab1]:checked ~ .slide .slide-inner {
+    left: 0;
+}
+
+.tab-inner input[id=tab2]:checked ~ .slide .slide-inner {
+    left: -700px;
+}
+
+.btn {
+    display: flex;
+}
+
+.btn label {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background-color:rgba(255,255,255,.7);
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    color: #333333;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1] {
+    background-color: #1B1B1B;
+    color: white;
+}
+
+input[id=tab2]:checked ~ .btn label[for=tab2] {
+    background-color: #1B1B1B;
+    color: white;
+}
+
+.sub-slide {
+    width: 700px;
+    height: 534px;
+    overflow: hidden;
+    position: relative;
+}
+
+.sub-slide-inner {
+    width: 2800px;
+    height: 534px;
+    display: flex;
+    transition: .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+input[name=sub-tab-menu] {
+    display: none;
+}
+.sub-btn {
+    margin-bottom: 60px;
+}
+.sub-btn label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color:rgba(255,255,255,.8);
+    border-radius: 15px;
+    cursor: pointer;
+    color:#333;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 20px;
+}
+.sub-btn label:nth-child(4) {
+    margin-right: 0px;
+}
+
+.sub-slide-inner01 {
+    width: 700px;
+    height: inherit;
+}
+.sub-slide-inner02 {
+    width: 700px;
+    height: inherit;
+}
+.sub-slide-inner03 {
+    width: 700px;
+    height: inherit;
+}
+.sub-slide-inner04 {
+    width: 700px;
+    height: inherit;
+}
+
+input[id=tab3]:checked ~ .sub-btn label[for=tab3] {
+    background-color: yellow;
+    color: black;
+}
+
+input[id=tab4]:checked ~ .sub-btn label[for=tab4] {
+    background-color: yellow;
+    color: black;
+}
+
+input[id=tab5]:checked ~ .sub-btn label[for=tab5] {
+    background-color: yellow;
+    color: black;
+}
+
+input[id=tab6]:checked ~ .sub-btn label[for=tab6] {
+    background-color: yellow;
+    color: black;
+}
